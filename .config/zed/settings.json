@@ -1,0 +1,83 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  // "features": {
+  //   "edit_prediction_provider": "copilot"
+  // },
+  "edit_predictions": {
+    "mode": "eager",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null
+    },
+    "enabled_in_text_threads": false
+  },
+  "base_keymap": "JetBrains",
+  "vim_mode": true,
+  "agent": {
+    "model_parameters": [],
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet-latest"
+    },
+    "version": "2"
+  },
+  "ui_font_size": 12,
+  "buffer_font_size": 12,
+  "theme": {
+    "mode": "system",
+    "light": "Ayu Mirage",
+    "dark": "One Dark"
+  },
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "languages": {
+    "Ruby": {
+      "language_servers": ["ruby-lsp", "rubocop"]
+    }
+    // "ERB": {
+    //   "formatter": [
+    //     {
+    //       "external": {
+    //         "command": "sh",
+    //         "arguments": [
+    //           "-c",
+    //           "f=erblinttemp_$RANDOM$RANDOM.html.erb; cat > $f; bundle exec erblint -a $f &>/dev/null; cat $f; rm $f;"
+    //         ]
+    //       }
+    //     },
+    //     {
+    //       "external": {
+    //         "command": "htmlbeautifier",
+    //         "arguments": []
+    //       }
+    //     }
+    //   ]
+    //   "format_on_save": "on"
+    // }
+  },
+  "lsp": {
+    "rubocop": {
+      "initialization_options": {
+        "safeAutocorrect": false
+      }
+    },
+    "ruby-lsp": {
+      "initialization_options": {
+        "enabledFeatures": {
+          // This disables diagnostics
+          "diagnostics": false
+        }
+      }
+    }
+  }
+}
